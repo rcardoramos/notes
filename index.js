@@ -20,6 +20,7 @@ function saveNote() {
     <button onclick='deleteNote(${id})'>Borrar</button>
   </div>`;
 
+//appendChild 
   notas.appendChild(noteCard);
   textNote.value = "";
   textNote.focus();
