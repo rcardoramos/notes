@@ -7,8 +7,12 @@ btnSave.addEventListener("click", () => {
   saveNote();
 });
 
+function generateId() {
+  return Math.floor(Math.random() * (10000 - 0 + 1) + 0);
+}
+
 function saveNote() {
-  const id = getId();
+  const id = generateId();
   const noteCard = document.createElement("div");
 
   noteCard.innerHTML = `<div id='note-${id}' class="content-card">
@@ -21,23 +25,7 @@ function saveNote() {
   textNote.focus();
 }
 
-textNote.addEventListener("keydown", function (event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    saveNote();
-  }
-});
-
 function deleteNote(id) {
   const noteToRemove = document.getElementById(`note-${id}`);
   noteToRemove.outerHTML = "";
 }
-
-function getId() {
-  return Math.floor(Math.random() * (10000 - 0 + 1) + 0);
-}
-
-const nombre = "Ricardo";
-const apellido = "Ramos";
-
-console.log(`${nombre} ${apellido}`);
