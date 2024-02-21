@@ -15,6 +15,11 @@ function saveNote() {
   const id = generateId();
   const noteCard = document.createElement("div");
 
+  if (textNote.value.trim() === ""){
+    alert("Por favor, ingresa texto para la nota.");
+    return;
+  }
+
   noteCard.innerHTML = `<div id='note-${id}' class="content-card">
     <p>${textNote.value}</p>
     <button onclick='deleteNote(${id})'>Borrar</button>
