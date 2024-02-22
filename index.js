@@ -8,7 +8,7 @@ btnSave.addEventListener("click", () => {
 });
 
 function generateId() {
-  return Math.floor(Math.random() * (10000 - 0 + 1) + 0);
+  return Math.floor(Math.random());
 }
 
 function saveNote() {
