@@ -18,7 +18,7 @@ function saveNote() {
   </div>`;
   
   if (textNote.value.trim() === ""){
-    alert("Por favor, ingresa texto para la nota.");
+    alert("Por favor, no olvides agregar tu texto.");
     return;
   }
   notas.appendChild(noteCard);
